@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LOK Community</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Manrope:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="static/css/stiles.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container" style="padding-top:.75rem; padding-bottom:.75rem;">
+      <div class="flex items-center justify-between gap-4">
+        <a href="index.html" class="brand" aria-label="LOK Community home">
+          <img
+            src="static/images/lok_long.png"
+            alt="LOK Community logo"
+            class="site-logo"
+          />
+        </a>
+
+        <!-- Desktop nav -->
+        <nav class="hidden md:flex items-center gap-6 text-sm" style="color:var(--muted)">
+          <a class="link hover:underline" href="mission.html">Our Mission</a>
+          <a class="link hover:underline" href="upcoming.html">Upcoming</a>
+          <a class="link hover:underline" href="calendar.html">Calendar</a>
+          <a class="link hover:underline" href="volunteer.html">Volunteer</a>
+          <a class="link hover:underline" href="contact.html">Contact Us</a>
+          <a class="btn btn-outline btn-pill text-sm" href="donate.html">Donate</a>
+          <a class="btn btn-pill text-sm btn-whatsapp" href="whatsapp.html">WhatsApp</a>
+        </nav>
+
+        <!-- Mobile nav -->
+        <button
+          id="menuBtn"
+          class="md:hidden px-3 py-2 rounded-lg border"
+          style="border-color:var(--line)"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6"  x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="divider-gold"></div>
+
+    <!-- Mobile drawer -->
+    <div id="mobileNav" class="md:hidden hidden border-t" style="border-color:var(--line)">
+      <div class="container" style="padding-top:.75rem; padding-bottom:.75rem;">
+        <div class="grid gap-2 text-sm" style="color:var(--muted)">
+          <a class="py-2 link" href="index.html">Home</a>
+          <a class="py-2 link" href="mission.html">Our Mission</a>
+          <a class="py-2 link" href="upcoming.html">Upcoming</a>
+          <a class="py-2 link" href="calendar.html">Calendar</a>
+          <a class="py-2 link" href="volunteer.html">Volunteer</a>
+          <a class="py-2 link" href="contact.html">Contact Us</a>
+          <a class="btn btn-outline w-full" href="donate.html">Donate</a>
+          <a class="btn w-full btn-whatsapp" href="whatsapp.html">Join WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Heading -->
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <div class="container hero-inner">
+        <div class="grid grid-2 items-center" style="gap:2rem;">
+          <div>
+            <div class="flex flex-wrap gap-2">
+              <span class="badge badge-pink">Women and Girls</span>
+              <span class="badge">Community-led</span>
+            </div>
+
+            <h1 class="headline text-4xl md:text-6xl font-extrabold leading-tight mt-4">
+              Light Of Knowledge Institute - Community Hub
+            </h1>
+
+            <p class="mt-4 text-lg muted max-w-xl">
+              Together in Growth, Guided by Wisdom!
+            </p>
+
+            <div class="mt-6 flex flex-wrap gap-3">
+              <a class="btn btn-pink" href="calendar.html">See the Calendar</a>
+              <a class="btn btn-ghost" href="#objectives">Objectives</a>
+            </div>
+
+            <p class="mt-4 text-sm muted">
+              Prefer quick sign-ups? Join WhatsApp for announcements and reminders.
+            </p>
+          </div>
+
+          <!-- Upcoming Panel -->
+          <aside class="card card-hover p-6 md:p-7" style="margin-right: 20px;">
+            <div class="kicker">Upcoming Events</div>
+
+            <div class="mt-4 grid gap-3">
+              <div class="card p-4">
+                <div class="text-sm muted">Tue • 6:00–8:00pm</div>
+                <div class="font-semibold mt-1">Badminton Night <span class="badge" style="margin-left:.35rem;">Sports</span></div>
+                <div class="text-sm muted mt-1">Ages 14–19 • Sports Center</div>
+              </div>
+
+              <div class="card p-4">
+                <div class="text-sm muted">Sat • 7:00–8:30pm</div>
+                <div class="font-semibold mt-1">Community Lecture <span class="badge badge-gold" style="margin-left:.35rem;">Learning</span></div>
+                <div class="text-sm muted mt-1">All ages • Main Hall</div>
+              </div>
+            </div>
+
+            <div class="mt-4 flex flex-wrap gap-2">
+              <a class="btn btn-outline" href="calendar.html">Explore all</a>
+              <a class="btn btn-whatsapp" href="whatsapp.html">Join WhatsApp</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHO WE ARE -->
+    <section class="section">
+      <div class="container">
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+          <div class="rounded-2xl shadow-lg ring-4 ring-pink-100">
+            <img src="static/images/women.jpg" 
+              alt="Community gathering"
+              class="rounded-2xl shadow-lg w-full object-cover">
+          </div>
+
+        <div>
+          <h2 class="headline text-3xl md:text-4xl font-extrabold">Who We Are</h2>
+          <div class="mt-3"
+            style="width:160px; height:6px; border-radius:999px; background:linear-gradient(90deg, var(--gold), var(--pink));">
+          </div>
+            <p class="mt-5 text-lg muted">
+            Light of Knowledge Institute is a registered charity, with our new community initiative developed under the 
+            guidance of Muftiyah Zaheeda Sakhawat MBE. The institute was created to provide a welcoming space where women and young 
+            girls of all ages can come together to learn, grow and support one another within a positive community environment.
+            <br><br>
+
+            Our aim is to support personal development, confidence and wellbeing through a variety of activities including 
+            courses, workshops, community events and sports. We organise community activities, social events and group days out 
+            that encourage friendship, participation and a sense of belonging.
+            <br><br>
+
+            Light of Knowledge Institute offers programmes designed to equip women and young girls with valuable life skills, 
+            strong values and the confidence to make positive contributions within their communities.
+            <br><br>
+
+            Our focus is on building a caring and supportive community where women and young girls can develop strong character, 
+            meaningful connections and a sense of purpose while taking part in educational, social and community activities.
+            </p>
+        </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- OBJECTIVES -->
+    <section id="objectives" class="section">
+      <div class="container">
+        <div class="text-center max-w-3xl mx-auto">
+          <h2 class="headline text-3xl md:text-4xl font-extrabold">Charitable objectives</h2>
+          <div class="mx-auto mt-3" style="width:160px; height:6px; border-radius:999px; background:linear-gradient(90deg, var(--green), var(--pink));"></div>
+        </div>
+
+        <div class="mt-8 grid md:grid-cols-3 gap-4">
+          <div class="objective-item">
+            <div class="objective-number">01</div>
+            <h3 class="objective-title">Advance education</h3>
+            <p class="objective-text">
+              To advance education for the public benefit by providing lectures, courses, workshops and other educational 
+              activities designed to promote personal development, ethical awareness, life skills, wellbeing and social responsibility.
+            </p>
+          </div>
+
+          <div class="objective-item">
+            <div class="objective-number">02</div>
+            <h3 class="objective-title">Promote community cohesion</h3>
+            <p class="objective-text">
+              To promote community cohesion and civic engagement for the public benefit by organising programmes, events and 
+              activities that strengthen community participation, mutual understanding and positive social contribution.
+            </p>
+          </div>
+
+          <div class="objective-item">
+            <div class="objective-number">03</div>
+            <h3 class="objective-title">Provide facilities & resources</h3>
+            <p class="objective-text">
+              To provide facilities and resources necessary to carry out the above purposes for the benefit of the public.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CORE VALUES STRIP -->
+    <section class="section-tight" style="position:relative;">
+      <div style="position:absolute; inset:0; background:rgba(251, 248, 252, 0.85); border-top:1px solid var(--line); border-bottom:1px solid var(--line);"></div>
+
+      <div class="container" style="position:relative;">
+        <div class="text-center">
+          <h3 class="headline text-3xl font-extrabold">Core Values</h3>
+          <p class="mt-2 muted">The standards we try to live by.</p>
+        </div>
+
+        <div class="values-grid">
+          <div class="value-item">
+            <img src="static/images/sincerity.png" alt="Sincerity" class="value-icon" />
+            <div class="value-title">Sincerity</div>
+        </div>
+    
+        <div class="value-item">
+            <img src="static/images/honesty.png" alt="Honesty" class="value-icon" />
+            <div class="value-title">Honesty</div>
+        </div>
+
+        <div class="value-item">
+            <img src="static/images/kindness.png" alt="Kindness" class="value-icon" />
+            <div class="value-title">Kindness</div>
+        </div>
+    <!---->
+        <div class="value-item">
+            <img src="static/images/value-tolerance.png" alt="Tolerance" class="value-icon" />
+            <div class="value-title">Tolerance</div>
+        </div>
+
+        <div class="value-item">
+            <img src="static/images/value-dedication.png" alt="Dedication" class="value-icon" />
+            <div class="value-title">Dedication</div>
+        </div>
+
+        <div class="value-item">
+            <img src="static/images/value-kindness.png" alt="Discipline" class="value-icon" />
+            <div class="value-title">Discipline</div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHATSAPP CTA -->
+    <section class="section">
+      <div class="container">
+        <div class="card p-6 md:p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-5 card-hover">
+          <div>
+            <div class="headline text-2xl font-extrabold">Join the WhatsApp Community</div>
+            <p class="text-sm mt-1 muted">Announcements, reminders, and quick sign-ups.</p>
+          </div>
+          <a class="btn btn-whatsapp" href="whatsapp.html">Open WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- DONATE STRIP -->
+    <section class="section-tight" style="border-top:1px solid var(--line); padding-bottom: 5%;">
+      <div class="container">
+        <div class="card p-6 md:p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-5 card-hover">
+          <div>
+            <div class="headline text-2xl font-extrabold">Support the Mission</div>
+            <p class="text-sm mt-1 muted">Your donation helps fund safe spaces, equipment, and community projects.</p>
+          </div>
+          <a class="btn btn-primary" href="donate.html">Donate</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer style="border-top:1px solid var(--line);">
+    <div class="container" style="padding-top:1rem; padding-bottom:1rem;">
+      <div class="grid md:grid-cols-3 gap-6 text-sm muted">
+        <div>
+          <div class="headline font-extrabold text-lg" style="color:var(--ink)">LOK Community</div>
+          <p class="mt-1">Together in Growth, Guided by Wisdom</p>
+          <div class="mt-3 flex items-center gap-3">
+            <a class="link" href="https://instagram.com/lokinstitute" target="_blank" rel="noopener">Instagram</a>
+            <span aria-hidden="true">•</span>
+            <a class="link" href="whatsapp.html">WhatsApp</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="font-semibold" style="color:var(--ink)"></div>
+          
+        </div>
+        
+
+        <div>
+          <div class="font-semibold" style="color:var(--ink)">Contact</div>
+          <p class="mt-2">
+            Email: <a class="link" href="mailto:lokinstitute@gmail.com">lokinstitute@gmail.com</a><br/>
+            Phone: <a class="link" href="tel:+447393850384">+44 73938 50384</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider-gold"></div>
+    <div class="container" style="padding-top:1rem; padding-bottom:1rem;">
+      <div class="text-xs muted">© <span id="year"></span> LOK Community. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- Mobile sticky actions (kept) -->
+  <div class="mobile-cta md:hidden">
+    <div class="tray">
+      <a href="https://chat.whatsapp.com/1XO0huo6kmQCgo7XJ6tije?mode=gi_t" target="_blank" rel="noopener" class="btn btn-whatsapp">WhatsApp</a>
+      <a href="donate.html" class="btn btn-primary">Donate</a>
+    </div>
+  </div>
+
+  <script src="static/js/main.js"></script>
+</body>
+</html>
