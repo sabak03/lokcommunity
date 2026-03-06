@@ -865,8 +865,10 @@ p{ line-height:1.6; }
   border-radius: 18px;
 
 }
+
 .donate-qr{
-  width: min(320px, 100%);
+  width: 315px;
+  max-width: 100%;
   height: auto;
   border-radius: 14px;
   background: #fff;
@@ -935,4 +937,5 @@ p{ line-height:1.6; }
   z-index:-1;
 
 }
+
 
