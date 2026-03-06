@@ -874,6 +874,9 @@ p{ line-height:1.6; }
   background-color: transparent;
 }
 
+.donate-qr:hover{
+  border: 1px dashed var(--pink);
+}
 
 .bank-box{
   background: rgba(252,231,243,.35);
@@ -936,6 +939,7 @@ p{ line-height:1.6; }
   z-index:-1;
 
 }
+
 
 
 
