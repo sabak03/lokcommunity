@@ -870,7 +870,7 @@ p{ line-height:1.6; }
   max-width: 100%;
   height: auto;
   border-radius: 14px;
-  bborder: 1px solid var(--pink);
+  border: 1px solid var(--pink);
   background-color: transparent;
 }
 
@@ -936,6 +936,7 @@ p{ line-height:1.6; }
   z-index:-1;
 
 }
+
 
 
 
