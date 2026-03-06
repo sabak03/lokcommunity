@@ -863,7 +863,7 @@ p{ line-height:1.6; }
   align-items:center;
   padding: 1rem;
   border-radius: 18px;
-
+  background: transparent;
 }
 
 .donate-qr{
@@ -937,5 +937,6 @@ p{ line-height:1.6; }
   z-index:-1;
 
 }
+
 
 
