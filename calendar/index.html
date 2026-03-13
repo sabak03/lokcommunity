@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calendar | LOK Community</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/x-icon" href="/static/images/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Manrope:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/css/stiles.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container" style="padding-top:.75rem; padding-bottom:.75rem;">
+      <div class="flex items-center justify-between gap-4">
+        <a href="/" class="brand" aria-label="LOK Community home">
+          <img
+            src="/static/images/lok_long.png"
+            alt="LOK Community logo"
+            class="site-logo"
+          />
+        </a>
+
+        <!-- Desktop nav -->
+        <nav class="hidden md:flex items-center gap-6 text-sm" style="color:var(--muted)">
+          <a class="link hover:underline" href="/mission/">Our Mission</a>
+          <a class="link hover:underline" href="/upcoming/">Upcoming</a>
+          <a class="link hover:underline" href="/calendar/">Calendar</a>
+          <a class="link hover:underline" href="/volunteer/">Volunteer</a>
+          <a class="link hover:underline" href="/contact/">Contact Us</a>
+          <a class="btn btn-ghostP btn-pill text-sm" style="border-width: 2px;color: var(--pink); padding: .55rem 1.3rem;" href="/donate/">Donate</a>
+          <a class="btn btn-pill text-sm btn-whatsapp" href="/whatsapp/">WhatsApp</a>
+        </nav>
+
+        <!-- Mobile nav -->
+        <button
+          id="menuBtn"
+          class="md:hidden px-3 py-2 rounded-lg border"
+          style="border-color:var(--line)"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6"  x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="divider-gold"></div>
+
+    <!-- Mobile drawer -->
+    <div id="mobileNav" class="md:hidden hidden border-t" style="border-color:var(--line)">
+      <div class="container" style="padding-top:.75rem; padding-bottom:.75rem;">
+        <div class="grid gap-2 text-sm" style="color:var(--muted)">
+          <a class="py-2 link" href="/mission/">Our Mission</a>
+          <a class="py-2 link" href="/upcoming/">Upcoming</a>
+          <a class="py-2 link" href="/calendar/">Calendar</a>
+          <a class="py-2 link" href="/volunteer/">Volunteer</a>
+          <a class="py-2 link" href="/contact/">Contact Us</a>
+          <a class="btn btn-ghostP w-full" style="border-width: 2px;color: var(--pink);"  href="/donate/">Donate</a>
+          <a class="btn w-full btn-whatsapp" href="/whatsapp/">Join WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="calendar-hero">
+    <div
+        class="calendar-hero-bg"
+        style="--calendar-hero:url('https://sabak03.github.io/lokcommunity/static/images/calendar.jpg');"
+        aria-hidden="true"
+    ></div>
+    <div class="calendar-hero-overlay" aria-hidden="true"></div>
+
+    <div class="container calendar-hero-inner">
+        <div class="max-w-3xl">
+        <h1 class="headline text-4xl md:text-6xl font-extrabold leading-tight mt-4">Calendar</h1>
+        <div class="mt-3" style="width:180px; height:6px; border-radius:999px; margin:5px 5px 0; background:linear-gradient(90deg, var(--green), var(--pink));"></div>
+        <span class="badge" style="margin-top: 1rem; margin-left: 5px;">Updated regularly</span>
+        <p class="mt-3 text-lg muted" style="margin-left: 5px;">
+            Check upcoming sessions, lectures, and events.
+        </p>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+            <a class="btn btn-pink" href="/upcoming/">See posters</a>
+            <a class="btn btn-ghost" href="#google-calendar">View Calendar</a>
+        </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- NEXT EVENTS + HOW IT WORKS -->
+    <section class="section">
+    <div class="container">
+        <div class="grid-events">
+        
+        <div class="card p-6 md:p-8">
+            <h2 class="headline text-2xl font-extrabold">Next events (Coming Soon)</h2>
+            <!--<p class="muted mt-1">Example events — update these as needed.</p>-->
+
+            <div class="event-list mt-6">
+            
+            <div class="event-row">
+                <div class="event-left">
+                <div class="event-time muted">Sunday 15th March • 2:15–3:15pm</div>
+                <div class="event-title">
+                    Weekly Ramadan Reflections <span class="badge badge-pink">Talk</span>
+                </div>
+                <div class="event-sub muted">Women Only • 137 Avon Street, CV2 3GQ</div>
+                </div>
+                <a class="btn btn-outline" href="/whatsapp/" target="_blank" rel="noopener">Sign up</a>
+            </div>
+
+            <div class="event-row">
+                <div class="event-left">
+                <div class="event-time muted">Wednesday 8th April • 12:00–1:00pmm</div>
+                <div class="event-title">
+                    Remaining Steadfast Beyond Ramadhan <span class="badge badge-pink">Lecture</span>
+                </div>
+                <div class="event-sub muted">Birmingham • 53-56 Shireland Road, B66 4RG</div>
+                </div>
+                <a class="btn btn-outline" href="/whatsapp/" target="_blank" rel="noopener">Remind me</a>
+            </div>
+            </div>
+        </div>
+
+        <!-- How it works -->
+        <div class="card p-6 md:p-8" style="background: transparent;border: 1px solid rgba(244,114,182,.35);">
+            <h2 class="headline text-2xl font-extrabold">How it works</h2>
+
+            <ul class="how-list mt-4">
+            <li>Events are posted weekly</li>
+            <li>Join WhatsApp for quick sign-ups</li>
+            <li>Respectful environment, values-led</li>
+            </ul>
+
+            <div class="mt-6">
+            <a class="btn btn-ghostP w-full" href="/volunteer/">Become a volunteer</a>
+            </div>
+        </div>
+
+        </div>
+    </div>
+    </section>
+
+    <!-- GOOGLE CALENDAR EMBED -->
+    <section id="google-calendar" class="section">
+    <div class="container">
+        <div class="card p-6 md:p-8" style="border: 1px dashed rgba(244,114,182,.35); background-color: rgba(252,231,243,.35);">
+        <div class="kicker">Live schedule</div>
+        <h2 class="headline text-2xl md:text-3xl font-extrabold mt-2">LOK Community Calendar</h2>
+        <p class="muted mt-2">
+            This calendar updates automatically.
+        </p>
+
+        <div class="mt-6 overflow-hidden rounded-2xl border" style="border-color:var(--line)">
+            <iframe
+            title="LOK Community Calendar"
+            src="YOUR_GOOGLE_CALENDAR_EMBED_URL_HERE"
+            style="border:0; width:100%; height:650px;"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+        </div>
+        </div>
+    </div>
+    </section>
+  </main>
+
+  <footer style="border-top:1px solid var(--line);">
+    <div class="container" style="padding-top:1rem; padding-bottom:1rem;">
+      <div class="grid md:grid-cols-3 gap-6 text-sm muted">
+        <div>
+          <div class="headline font-extrabold text-lg" style="color:var(--ink)">LOK Community</div>
+          <p class="mt-1">Together in Growth, Guided by Wisdom</p>
+          <div class="mt-3 flex items-center gap-3">
+            <a class="link" href="https://instagram.com/lokinstitute" target="_blank" rel="noopener">Instagram</a>
+            <span aria-hidden="true">•</span>
+            <a class="link" href="/whatsapp/">WhatsApp</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="font-semibold" style="color:var(--ink)"></div>
+          
+        </div>
+        
+
+        <div>
+          <div class="font-semibold" style="color:var(--ink)">Contact</div>
+          <p class="mt-2">
+            Email: <a class="link" href="mailto:lokinstitute@gmail.com">lokinstitute@gmail.com</a><br/>
+            Phone: <a class="link" href="tel:+447393850384">+44 73938 50384</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider-gold"></div>
+    <div class="container" style="padding-top:1rem; padding-bottom:1rem;">
+      <div class="text-xs muted">© <span id="year"></span> LOK Community. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="/static/js/main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+
+</html>

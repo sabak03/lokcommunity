@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | LOK Community</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/x-icon" href="/static/images/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Manrope:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/css/stiles.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container" style="padding-top:.75rem; padding-bottom:.75rem;">
+      <div class="flex items-center justify-between gap-4">
+        <a href="/" class="brand" aria-label="LOK Community home">
+          <img
+            src="/static/images/lok_long.png"
+            alt="LOK Community logo"
+            class="site-logo"
+          />
+        </a>
+
+        <!-- Desktop nav -->
+        <nav class="hidden md:flex items-center gap-6 text-sm" style="color:var(--muted)">
+          <a class="link hover:underline" href="/mission/">Our Mission</a>
+          <a class="link hover:underline" href="/upcoming/">Upcoming</a>
+          <a class="link hover:underline" href="/calendar/">Calendar</a>
+          <a class="link hover:underline" href="/volunteer/">Volunteer</a>
+          <a class="link hover:underline" href="/contact/">Contact Us</a>
+          <a class="btn btn-ghostP btn-pill text-sm" style="border-width: 2px;color: var(--pink); padding: .55rem 1.3rem;" href="/donate/">Donate</a>
+          <a class="btn btn-pill text-sm btn-whatsapp" href="/whatsapp/">WhatsApp</a>
+        </nav>
+
+        <!-- Mobile nav -->
+        <button
+          id="menuBtn"
+          class="md:hidden px-3 py-2 rounded-lg border"
+          style="border-color:var(--line)"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6"  x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="divider-gold"></div>
+
+    <!-- Mobile drawer -->
+    <div id="mobileNav" class="md:hidden hidden border-t" style="border-color:var(--line)">
+      <div class="container" style="padding-top:.75rem; padding-bottom:.75rem;">
+        <div class="grid gap-2 text-sm" style="color:var(--muted)">
+          <a class="py-2 link" href="/mission/">Our Mission</a>
+          <a class="py-2 link" href="/upcoming/">Upcoming</a>
+          <a class="py-2 link" href="/calendar/">Calendar</a>
+          <a class="py-2 link" href="/volunteer/">Volunteer</a>
+          <a class="py-2 link" href="/contact/">Contact Us</a>
+          <a class="btn btn-ghostP w-full" style="border-width: 2px;color: var(--pink);"  href="/donate/">Donate</a>
+          <a class="btn w-full btn-whatsapp" href="/whatsapp/">Join WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="calendar-hero">
+      <div
+        class="calendar-hero-bg"
+        style="--calendar-hero:url('https://sabak03.github.io/lokcommunity/static/images/contact.jpg');"
+        aria-hidden="true"
+      ></div>
+      <div class="calendar-hero-overlay" aria-hidden="true"></div>
+
+      <div class="container calendar-hero-inner">
+        <div class="max-w-3xl">
+          <h1 class="headline text-4xl md:text-6xl font-extrabold leading-tight mt-4">Contact Us</h1>
+          <div class="mt-3" style="width:180px; height:6px; border-radius:999px; margin:5px 5px 0; background:linear-gradient(90deg, var(--gold), var(--pink));"></div>
+          <span class="badge badge-pink" style="margin-top: 1rem; margin-left: 5px;">We’re happy to help</span>
+          <p class="mt-3 text-lg muted" style="margin-left: 5px;">
+            For questions, sign-ups, volunteering, or collaboration — reach out using any of the options below.
+          </p>
+
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a class="btn btn-whatsapp" href="/whatsapp/">Message on WhatsApp</a>
+            <a class="btn btn-ghostP" href="#find-us">Find us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT OPTIONS -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center max-w-3xl mx-auto">
+          <h2 class="headline text-3xl md:text-4xl font-extrabold">Get in touch</h2>
+          <div class="mt-3" style="width:160px; height:6px; border-radius:999px; margin:10px auto 0; background:linear-gradient(90deg, var(--green), var(--pink));"></div>
+          <p class="muted mt-3">Choose what’s easiest — we usually reply fastest on WhatsApp.</p>
+        </div>
+
+        <div class="contact-grid mt-8">
+          <a class="contact-card" href="mailto:lokinstitute@gmail.com">
+            <div class="contact-icon">✉️</div>
+            <div class="contact-title">Email</div>
+            <div class="contact-sub">lokinstitute@gmail.com</div>
+            <div class="contact-cta">Send an email</div>
+          </a>
+
+          <a class="contact-card" href="tel:+447393850384">
+            <div class="contact-icon">📞</div>
+            <div class="contact-title">Call</div>
+            <div class="contact-sub">+44 73938 50384</div>
+            <div class="contact-cta">Call now</div>
+          </a>
+
+          <a class="contact-card" href="https://instagram.com/lokinstitute" target="_blank" rel="noopener">
+            <div class="contact-icon">📷</div>
+            <div class="contact-title">Instagram</div>
+            <div class="contact-sub">@lokinstitute</div>
+            <div class="contact-cta">View Instagram</div>
+          </a>
+
+          <a class="contact-card" href="/whatsapp/">
+            <div class="contact-icon">💬</div>
+            <div class="contact-title">WhatsApp</div>
+            <div class="contact-sub">Join community updates</div>
+            <div class="contact-cta">Open WhatsApp</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map -->
+    <section id="find-us" class="section money-bg">
+      <div class="container">
+        <div class="text-center max-w-3xl mx-auto">
+          <h2 class="headline text-3xl md:text-4xl font-extrabold">Find us</h2>
+          <div class="mt-3" style="width:160px; height:6px; border-radius:999px; margin:10px auto 0; background:linear-gradient(90deg, var(--gold), var(--green));"></div>
+        </div>
+
+        <div class="mt-8 grid md:grid-cols-2 gap-6 items-start">
+          <div class="card p-6 md:p-8" style="background-color: transparent; border: 1px solid rgba(244,114,182,.35);">
+            <div class="kicker">Location</div>
+            <h3 class="headline text-2xl font-extrabold mt-2">Our venue</h3>
+
+            <div class="mt-4">
+              <p class="muted">
+                <strong>Address:</strong><br />
+                Umar Education & Welfare Trust<br />
+                137 Avon Street<br />
+                Covnetry, CV2 3GQ
+              </p>
+              <br><br><br>
+            </div>
+
+            <div class="mt-5 flex flex-wrap gap-2">
+              <a class="btn btn-primary" href="https://www.google.com/maps?sca_esv=0555e3765a0d8a6a&rlz=1C1RXQR_en-GBGB1171GB1171&output=search&q=137+Avon+Street,+CV2+3GQ,+Coventry,+UK&source=lnms&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpUrv6YeyJhXfuYqj4Fj6c1RYL5DaX_U0gMkcklonRgu_MX6RwCKUGkLw8vDzN8sl2eTDpaeNP6B-jzggPWHlSzxzMQR_z31ju4JFRiNCDXcwnVu08SfgvaIOrCAE-gHEV3nnMxdzyu4D5AvZvwSHnmoqWwIJdgjA0OCzqh1JnZu0uQeXDxB1q2Fu-v2e3B9UtqJsAjg&entry=mc&ved=1t:200715&ictx=111" target="_blank" rel="noopener">Open in Google Maps</a>
+              <a class="btn btn-pink" href="/upcoming/">See events</a>
+            </div>
+          </div>
+
+          <div class="card p-0 overflow-hidden">
+            <iframe
+              title="Map"
+              src="https://www.google.com/maps?sca_esv=0555e3765a0d8a6a&rlz=1C1RXQR_en-GBGB1171GB1171&output=search&q=137+Avon+Street,+CV2+3GQ,+Coventry,+UK&source=lnms&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpUrv6YeyJhXfuYqj4Fj6c1RYL5DaX_U0gMkcklonRgu_MX6RwCKUGkLw8vDzN8sl2eTDpaeNP6B-jzggPWHlSzxzMQR_z31ju4JFRiNCDXcwnVu08SfgvaIOrCAE-gHEV3nnMxdzyu4D5AvZvwSHnmoqWwIJdgjA0OCzqh1JnZu0uQeXDxB1q2Fu-v2e3B9UtqJsAjg&entry=mc&ved=1t:200715&ictx=111%20UK&output=embed"
+              style="border:0; width:100%; height:420px;"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer style="border-top:1px solid var(--line);">
+    <div class="container" style="padding-top:1rem; padding-bottom:1rem;">
+      <div class="grid md:grid-cols-3 gap-6 text-sm muted">
+        <div>
+          <div class="headline font-extrabold text-lg" style="color:var(--ink)">LOK Community</div>
+          <p class="mt-1">Together in Growth, Guided by Wisdom</p>
+          <div class="mt-3 flex items-center gap-3">
+            <a class="link" href="https://instagram.com/lokinstitute" target="_blank" rel="noopener">Instagram</a>
+            <span aria-hidden="true">•</span>
+            <a class="link" href="/whatsapp/">WhatsApp</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="font-semibold" style="color:var(--ink)"></div>
+          
+        </div>
+        
+
+        <div>
+          <div class="font-semibold" style="color:var(--ink)">Contact</div>
+          <p class="mt-2">
+            Email: <a class="link" href="mailto:lokinstitute@gmail.com">lokinstitute@gmail.com</a><br/>
+            Phone: <a class="link" href="tel:+447393850384">+44 73938 50384</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider-gold"></div>
+    <div class="container" style="padding-top:1rem; padding-bottom:1rem;">
+      <div class="text-xs muted">© <span id="year"></span> LOK Community. All rights reserved.</div>
+    </div>
+  </footer>
+
+
+
+  <script src="/static/js/main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+
+</html>
+

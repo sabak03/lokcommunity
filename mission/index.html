@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mission | LOK Community</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/x-icon" href="/static/images/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Manrope:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/css/stiles.css" />
+</head>
+
+<body>
+    <header class="site-header">
+    <div class="container" style="padding-top:.75rem; padding-bottom:.75rem;">
+      <div class="flex items-center justify-between gap-4">
+        <a href="/" class="brand" aria-label="LOK Community home">
+          <img
+            src="/static/images/lok_long.png"
+            alt="LOK Community logo"
+            class="site-logo"
+          />
+        </a>
+
+        <!-- Desktop nav -->
+        <nav class="hidden md:flex items-center gap-6 text-sm" style="color:var(--muted)">
+          <a class="link hover:underline" href="/mission/">Our Mission</a>
+          <a class="link hover:underline" href="/upcoming/">Upcoming</a>
+          <a class="link hover:underline" href="/calendar/">Calendar</a>
+          <a class="link hover:underline" href="/volunteer/">Volunteer</a>
+          <a class="link hover:underline" href="/contact/">Contact Us</a>
+          <a class="btn btn-ghostP btn-pill text-sm" style="border-width: 2px;color: var(--pink); padding: .55rem 1.3rem;" href="/donate/">Donate</a>
+          <a class="btn btn-pill text-sm btn-whatsapp" href="/whatsapp/">WhatsApp</a>
+        </nav>
+
+        <!-- Mobile nav -->
+        <button
+          id="menuBtn"
+          class="md:hidden px-3 py-2 rounded-lg border"
+          style="border-color:var(--line)"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6"  x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="divider-gold"></div>
+
+    <!-- Mobile drawer -->
+    <div id="mobileNav" class="md:hidden hidden border-t" style="border-color:var(--line)">
+      <div class="container" style="padding-top:.75rem; padding-bottom:.75rem;">
+        <div class="grid gap-2 text-sm" style="color:var(--muted)">
+          <a class="py-2 link" href="/mission/">Our Mission</a>
+          <a class="py-2 link" href="/upcoming/">Upcoming</a>
+          <a class="py-2 link" href="/calendar/">Calendar</a>
+          <a class="py-2 link" href="/volunteer/">Volunteer</a>
+          <a class="py-2 link" href="/contact/">Contact Us</a>
+          <a class="btn btn-ghostP w-full" style="border-width: 2px;color: var(--pink);"  href="/donate/">Donate</a>
+          <a class="btn w-full btn-whatsapp" href="/whatsapp/">Join WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="calendar-hero">
+      <div
+        class="calendar-hero-bg"
+        style="--calendar-hero:url('https://sabak03.github.io/lokcommunity/static/images/women.jpg');"
+        aria-hidden="true"
+      ></div>
+      <div class="calendar-hero-overlay" aria-hidden="true"></div>
+
+      <div class="container calendar-hero-inner">
+        <div class="max-w-3xl">
+          <h1 class="headline text-4xl md:text-6xl font-extrabold leading-tight mt-4">Our Mission</h1>
+          <div class="mt-3" style="width:180px; height:6px; border-radius:999px; margin:5px 5px 0; background:linear-gradient(90deg, var(--gold), var(--pink));"></div>
+          <span class="badge badge-pink" style="margin-top: 1rem; margin-left: 5px;">Women & girls • community • connection</span>
+          <p class="mt-3 text-lg muted" style="margin-left: 5px;">
+            Light of Knowledge Community is a welcoming space for Muslim women and girls to connect,
+            build friendships, and take part in activities — from events and workshops to sport and days out.
+          </p>
+
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a class="btn btn-pink" href="/upcoming/">See what’s on</a>
+            <a class="btn btn-outline" href="/whatsapp/">Join WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="mission-layout">
+
+          <!-- About -->
+          <div class="card p-6 md:p-8" style="background-color: transparent;">
+            <div class="kicker">Who we are</div>
+            <h2 class="headline text-2xl md:text-3xl font-extrabold mt-2">A place to bond, socialise and have fun!</h2>
+
+            <p class="muted mt-4">
+              We’re a community supporting Muslim women and girls of all ages to feel confident, connected
+              and included. Our sessions are designed to be friendly and welcoming — whether you’re coming for
+              the first time or bringing a friend.
+            </p>
+
+            <p class="muted mt-3">
+              Activities may include community events, wellbeing sessions, creative workshops, sports,
+              volunteering opportunities, and occasional days out. We keep things simple: good company,
+              positive vibes, and a space where everyone feels respected.
+            </p>
+
+            <div class="mt-6 grid sm:grid-cols-2 gap-3">
+              <div class="objective-item" style="padding-top: .8rem;">
+                <div class="objective-title">Safe & welcoming</div>
+                <div class="objective-text">A supportive environment where women and girls can feel comfortable and included.</div>
+              </div>
+              <div class="objective-item" style="padding-top: .8rem;">
+                <div class="objective-title">Friendship & belonging</div>
+                <div class="objective-text">Meet others, build confidence, and create a strong local network.</div>
+              </div>
+              <div class="objective-item" style="padding-top: .8rem;">
+                <div class="objective-title">Activities that uplift</div>
+                <div class="objective-text">Events, workshops, sports and community days that bring joy and meaning.</div>
+              </div>
+              <div class="objective-item" style="padding-top: .8rem;">
+                <div class="objective-title">Positive impact</div>
+                <div class="objective-text">Opportunities to volunteer and contribute to the wider community.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slideshow -->
+          <div class="slideshow sleek mt-5" aria-label="Community photo slideshow" style="border: 1px dashed rgba(244,114,182,.35); background-color: transparent;">
+
+            <img class="slide is-active" src="/static/images/women.jpg" alt="Community event photo 1" />
+            <img class="slide" src="/static/images/lok_long.png" alt="Community event photo 2" />
+            <img class="slide" src="/static/images/calendar.jpg" alt="Community event photo 3" />
+
+            <button class="slide-arrow left" type="button" id="prevSlide" aria-label="Previous photo"> ‹ </button>
+            <button class="slide-arrow right" type="button" id="nextSlide" aria-label="Next photo">
+                ›
+            </button>
+
+            <div class="slide-dots" role="tablist" aria-label="Slideshow dots">
+                <button class="dot is-active" type="button" data-dot="0" aria-label="Slide 1"></button>
+                <button class="dot" type="button" data-dot="1" aria-label="Slide 2"></button>
+                <button class="dot" type="button" data-dot="2" aria-label="Slide 3"></button>
+            </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OBJECTIVES -->
+    <section id="objectives" class="section">
+      <div class="container">
+        <div class="text-center max-w-3xl mx-auto">
+          <h2 class="headline text-3xl md:text-4xl font-extrabold">Charitable objectives</h2>
+          <div class="mx-auto mt-3" style="width:160px; height:6px; border-radius:999px; background:linear-gradient(90deg, var(--green), var(--pink));"></div>
+        </div>
+
+        <div class="mt-8 grid md:grid-cols-3 gap-4">
+          <div class="objective-item">
+            <div class="objective-number">01</div>
+            <h3 class="objective-title">Advance education</h3>
+            <p class="objective-text">
+              To advance education for the public benefit by providing lectures, courses, workshops and other educational 
+              activities designed to promote personal development, ethical awareness, life skills, wellbeing and social responsibility.
+            </p>
+          </div>
+
+          <div class="objective-item">
+            <div class="objective-number">02</div>
+            <h3 class="objective-title">Promote community cohesion</h3>
+            <p class="objective-text">
+              To promote community cohesion and civic engagement for the public benefit by organising programmes, events and 
+              activities that strengthen community participation, mutual understanding and positive social contribution.
+            </p>
+          </div>
+
+          <div class="objective-item">
+            <div class="objective-number">03</div>
+            <h3 class="objective-title">Provide facilities & resources</h3>
+            <p class="objective-text">
+              To provide facilities and resources necessary to carry out the above purposes for the benefit of the public.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bring a friend -->
+    <section class="section">
+      <div class="container">
+        <div class="card p-6 md:p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div>
+            <div class="headline text-2xl font-extrabold">Come along or bring a friend</div>
+            <p class="muted mt-1">Join WhatsApp for updates, reminders and sign-ups.</p>
+          </div>
+          <div class="flex flex-wrap gap-3">
+            <a class="btn btn-whatsapp" href="/whatsapp/">Join WhatsApp</a>
+            <a class="btn btn-ghostP" href="/contact/">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer style="border-top:1px solid var(--line);">
+    <div class="container" style="padding-top:1rem; padding-bottom:1rem;">
+      <div class="grid md:grid-cols-3 gap-6 text-sm muted">
+        <div>
+          <div class="headline font-extrabold text-lg" style="color:var(--ink)">LOK Community</div>
+          <p class="mt-1">Together in Growth, Guided by Wisdom</p>
+          <div class="mt-3 flex items-center gap-3">
+            <a class="link" href="https://instagram.com/lokinstitute" target="_blank" rel="noopener">Instagram</a>
+            <span aria-hidden="true">•</span>
+            <a class="link" href="/whatsapp/">WhatsApp</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="font-semibold" style="color:var(--ink)"></div>
+          
+        </div>
+        
+
+        <div>
+          <div class="font-semibold" style="color:var(--ink)">Contact</div>
+          <p class="mt-2">
+            Email: <a class="link" href="mailto:lokinstitute@gmail.com">lokinstitute@gmail.com</a><br/>
+            Phone: <a class="link" href="tel:+447393850384">+44 73938 50384</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider-gold"></div>
+    <div class="container" style="padding-top:1rem; padding-bottom:1rem;">
+      <div class="text-xs muted">© <span id="year"></span> LOK Community. All rights reserved.</div>
+    </div>
+  </footer>
+
+
+
+  <script src="/static/js/main.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const slides = Array.from(document.querySelectorAll('.slide'));
+    const dots = Array.from(document.querySelectorAll('.dot'));
+    let idx = 0;
+
+    function showSlide(i){
+        if (!slides.length) return;
+
+        slides.forEach(s => s.classList.remove('is-active'));
+        dots.forEach(d => d.classList.remove('is-active'));
+
+        slides[i].classList.add('is-active');
+        dots[i]?.classList.add('is-active');
+        idx = i;
+    }
+
+    function next(){
+        showSlide((idx + 1) % slides.length);
+    }
+
+    function prev(){
+        showSlide((idx - 1 + slides.length) % slides.length);
+    }
+
+    document.getElementById('nextSlide')?.addEventListener('click', next);
+    document.getElementById('prevSlide')?.addEventListener('click', prev);
+
+    dots.forEach((dot) => {
+        dot.addEventListener('click', () => {
+        const i = Number(dot.dataset.dot);
+        if (!Number.isNaN(i)) showSlide(i);
+        });
+    });
+
+    // Auto rotate every 6s (pause on hover)
+    let timer = null;
+    const wrap = document.querySelector('.slideshow.sleek');
+
+    function start(){ if (slides.length) timer = setInterval(next, 6000); }
+    function stop(){ if (timer) clearInterval(timer); timer = null; }
+
+    wrap?.addEventListener('mouseenter', stop);
+    wrap?.addEventListener('mouseleave', start);
+
+    start();
+  </script>
+</body>
+</html>
+
+
