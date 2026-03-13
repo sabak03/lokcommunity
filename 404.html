@@ -8,8 +8,10 @@
 
 <script src="https://cdn.tailwindcss.com"></script>
 
+<link rel="icon" type="image/x-icon" href="/static/images/favicon.png">
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Manrope:wght@700;800&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="static/css/stiles.css" />
+<link rel="stylesheet" href="/static/css/stiles.css" />
 
 </head>
 
@@ -41,7 +43,7 @@ You will be redirected in
 <div class="mt-10">
 
 <img
-src="static/images/loading.gif"
+src="/static/images/loading.gif"
 alt="Page not found illustration"
 style="max-width:320px;margin:auto;opacity:.9;"
 />
@@ -73,7 +75,7 @@ style="max-width:320px;margin:auto;opacity:.9;"
 document.getElementById('year').textContent = new Date().getFullYear();
 
 setTimeout(() => {
-window.location.href = "index.html";
+window.location.href = "/";
 }, 8000);
 
 let seconds = 8;
@@ -86,7 +88,7 @@ let timer = setInterval(() => {
 
   if (seconds <= 0) {
     clearInterval(timer);
-    window.location.href = "index.html";
+    window.location.href = "/";
   }
 }, 1000);
 
