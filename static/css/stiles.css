@@ -163,13 +163,13 @@ p{ line-height:1.6; }
 .btn-ghostP{
   border:1px solid var(--line);
   border-color: var(--pink);
-  background:#fff;
+  background: transparent;
   color:var(--ink);
 }
 .btn-ghostP:hover,
 .btn-ghostP:active{
-  background:var(--pink-soft);
-  color:var(--pink);
+  background:var(--pink);
+  color: white;
   border-color:var(--pink);
 }
 
