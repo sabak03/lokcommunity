@@ -93,8 +93,29 @@
     <section class="section-tight">
       <div class="container">
         <div class="posters-grid">
+
           
-          <!-- Poster 1 -->
+          <button
+            class="poster-card"
+            type="button"
+            data-title="Hajj and Umrah Course"
+            data-date="Tuesdays • 12:00–2:00pm"
+            data-location="Umar Education & Welfare Trust, 137 Avon Street (Front Door), Coventry, CV2 3GQ"
+            data-desc="<strong>The Course Includes:</strong> <br>
+              1. Fiqh of Hajj and Umrah. <br>
+              2. The Spiritual, Social, and Moral Objectives of Hajj. <br>
+              3. Maintaining Spirituality after Hajj."
+            data-image="static/images/posters/hajj26.png"
+            data-button-text="Register Now"
+            data-button-link="https://docs.google.com/forms/d/e/1FAIpQLSdZXWaWrq7TC1YstA7whXJAp-heY61W8c0knNt0p9Ctu58lDA/viewform"
+          >
+            <img src="static/images/posters/hajj26.png" alt="Hajj and Umrah Course" class="poster-img" />
+            <div class="poster-meta">
+              <div class="poster-title">Hajj and Umrah Course</div>
+              <div class="poster-sub muted">Tuesdays • 12:00–2:00pm</div>
+            </div>
+          </button>
+
           <button
             class="poster-card"
             type="button"
@@ -112,7 +133,6 @@
             </div>
           </button>
 
-          <!-- Poster 2 -->
           <button
             class="poster-card"
             type="button"
@@ -129,10 +149,8 @@
             </div>
           </button>
 
-          <!-- Add more posters by copying the button block -->
         </div>
 
-        <!-- Optional note -->
         <div class="mt-8 text-center text-sm muted">
           Want to stay updated? Join WhatsApp for reminders and quick sign-ups.
           <div class="mt-3">
@@ -172,6 +190,10 @@
           <p id="modalDesc" class="mt-4 muted"></p>
           <p id="modalDesc2" class="mt-4 muted"></p>
 
+          <div class="modal-actions mt-4">
+            <a id="modalButton" class="btn btn-primary hidden" target="_blank" rel="noopener"></a>
+          </div>
+
           <div class="mt-5 flex flex-wrap gap-2">
             <a class="btn btn-ghostP" href="/contact/" target="_blank" rel="noopener">Link for contact?</a>
             <a class="btn btn-pink" href="/calendar/">See calendar</a>
@@ -191,7 +213,7 @@
   <script src="/static/js/main.js"></script>
 
   <script>
-    // Upcoming posters modal (robust)
+    // Posters Modal
     const modal = document.getElementById('posterModal');
     const modalImg = document.getElementById('modalImg');
     const modalTitle = document.getElementById('modalTitle');
@@ -199,9 +221,10 @@
     const modalLocation = document.getElementById('modalLocation');
     const modalDesc = document.getElementById('modalDesc');
     const modalDesc2 = document.getElementById('modalDesc2');
+    const modalButton = document.getElementById('modalButton');
 
     function openModal(data){
-        if (!data.image) return; // nothing to show
+        if (!data.image) return; 
 
         modalImg.src = data.image;
         modalImg.alt = (data.title ? data.title : "Event") + " poster";
@@ -209,8 +232,16 @@
         modalTitle.textContent = data.title || "";
         modalDate.textContent = data.date || "";
         modalLocation.textContent = data.location || "";
-        modalDesc.textContent = data.desc || "";
-        modalDesc2.textContent = data.desc2 || "";
+        modalDesc.innerHTML = data.desc || "";
+        modalDesc2.innerHTML = data.desc2 || "";
+
+        if (data.buttonText && data.buttonLink) {
+          modalButton.textContent = data.buttonText;
+          modalButton.href = data.buttonLink;
+          modalButton.classList.remove('hidden');
+        } else {
+          modalButton.classList.add('hidden');
+        }
 
         modal.classList.remove('hidden');
         modal.setAttribute('aria-hidden', 'false');
@@ -223,10 +254,10 @@
         document.body.style.overflow = '';
     }
 
-    // Event delegation: works even if you change poster layout
     document.addEventListener('click', (e) => {
         const poster = e.target.closest('.poster-card');
         const shouldClose = e.target.closest('[data-close="true"]');
+
 
         // Open
         if (poster) {
@@ -237,12 +268,13 @@
             location: poster.dataset.location,
             desc: poster.dataset.desc,
             desc2: poster.dataset.desc2,
-            image: poster.dataset.image
+            image: poster.dataset.image,
+            buttonText: poster.dataset.buttonText,
+            buttonLink: poster.dataset.buttonLink
         });
         return;
         }
 
-        // Close (backdrop or close button)
         if (shouldClose) {
         e.preventDefault();
         closeModal();
