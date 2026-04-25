@@ -35,6 +35,17 @@ section{
 }
 
 
+.reveal{
+  opacity:0;
+  transform:translateY(28px);
+  transition:.8s ease;
+}
+
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+
 /* Typography */
 .headline{
   font-family: Manrope, Inter, sans-serif;
