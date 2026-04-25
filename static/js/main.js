@@ -19,3 +19,7 @@ window.addEventListener('scroll', () => {
 // Dynamic year
 const year = document.getElementById('year');
 if (year) year.textContent = new Date().getFullYear();
+
+if (elementTop < windowHeight - 80) {
+  element.classList.add("active");
+}
